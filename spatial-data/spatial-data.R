@@ -176,6 +176,7 @@ st_crs(lnd_sf)
 
 ## ------------------------------------------------------------------------------------
 x_ll <- read.csv("data/confirmed-sightings.csv")
+x_ll<-confirmed_sightings
 x_ll <- st_as_sf(x_ll, coords = c("Longitude", "Latitude"), crs = 4326)
 st_crs(x_ll)
 d_ll <- st_distance(x_ll[1,], x_ll[2,])
