@@ -2,7 +2,8 @@
 # returns how old you are in years.
 
 age <- function(bday) {
-  ????
+  ans<-today()-bday
+  return(as.duration(ans))
 }
 
-age(ymd("1981-03-13"))
+age(ymd("1998-02-11"))

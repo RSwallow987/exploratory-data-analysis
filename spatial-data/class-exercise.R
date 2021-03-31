@@ -140,4 +140,5 @@ names(reclass) = names(input_ras)
 #1 We have used raster::rasterFromXYZ() to convert a input_tidy into a raster brick. 
 #Try to achieve the same with the help of the sp::gridded() function.
 #Download the csv file containing inhabitant information for a 100-m cell resolution
-data<-read_csv(file="data/townsGerman")
+data<-read_csv(file="data/townsGerman") #did not work 
+
