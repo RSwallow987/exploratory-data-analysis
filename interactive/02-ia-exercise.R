@@ -14,10 +14,12 @@ p <- diamonds %>% sample_n(1000) %>%
 
 # make a similar plot, but with a geom_density2d geom
 p <- diamonds %>% sample_n(1000) %>%
-  ????
+  ggplot(aes(x=x,y=price,color=clarity))+geom_density2d()+labs(x = "Diamond width (x-dim)", y = "Price") +
+  scale_color_brewer(palette = "Set2")
 
 # view it
 p
 
 # ggplotly and then view interactively
-????
+ggplotly(p)
+

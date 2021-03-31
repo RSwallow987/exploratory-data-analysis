@@ -20,5 +20,10 @@ plot_ly(diamonds, x = ~cut, color = I("red"), stroke = I("black"), span = I(5))
 plot_ly(diamonds, x = ~cut, color = I("red"), stroke = I("black"), span = I(5), alpha = I(0.2))
 
 # use the pipe to make the plot in the exercise
-diamonds %>%
-  ???
+x <- list(
+  title = "cut"
+)
+y <- list(
+  title = "n")
+
+diamonds %>%plot_ly(x=~cut,color=I("red"))%>%layout( title = "Number of diamonds per catagory",xaxis=x,yaxis=y)
