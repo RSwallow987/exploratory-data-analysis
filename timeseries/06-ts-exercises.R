@@ -9,11 +9,12 @@ library(dygraphs)
 load("timeseries/data/purchase_data.rdata")
 
 # 2. Use group_by and count() to get number of purchases for each brand in each week
-??
+new_data<-purchase_data%>%group_by(brand,week)%>%count()
   
 # 3. Use pivot_wider to spread long to wide for dygraph format (one column per brand)
-??
+new_data<-new_data%>%pivot_wider(names_from=brand,values_from=n)
   
 # 4. Plot using dygraph
-??
+new_data%>%dygraph() %>% dyOptions(stackedGraph = FALSE) %>%
+  dyRangeSelector(height = 20)
   
